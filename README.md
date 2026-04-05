@@ -1,18 +1,18 @@
 # PAROL6-ROS2-MOVEIT
 
-This repository provides ROS 2 MoveIt 2 integration for the [PAROL6](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm) 6-DOF open-source robotic arm. It includes a simulation demo, URDF models, and launch files for testing and planning.
+This repository provides ROS 2 MoveIt 2 integration for the [PAROL6](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm) 6-DOF open-source robotic arm. It includes a simulation demo, URDF models, and launch files for testing and planning. This is forked repository from the original version (https://github.com/PCrnjak/PAROL6-ROS2-MOVEIT?tab=readme-ov-file) to migrate the source code to Ubuntu 24.04 and ROS2 Jazzy.
 
 ![PAROL6 Demo](MEDIA/PAROL6_moveit_gif.gif)
 
 ---
 
-# Source set up (execute it before run every time)
+## Source set up (execute it every time before run the demo.launch.py )
 source ~/ros2_ws/install/setup.bash
 
 ## 🛠️ Installation & Setup
 
 **Tested on:**
-- Ubuntu 22.04
+- Ubuntu 24.04
 - ROS 2 Jazzy
 
 ### 1. Install ROS 2 Jazzy and MoveIt 2
