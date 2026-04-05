@@ -6,19 +6,22 @@ This repository provides ROS 2 MoveIt 2 integration for the [PAROL6](https://git
 
 ---
 
+# Source set up (execute it before run every time)
+source ~/ros2_ws/install/setup.bash
+
 ## 🛠️ Installation & Setup
 
 **Tested on:**
 - Ubuntu 22.04
-- ROS 2 Humble
+- ROS 2 Jazzy
 
-### 1. Install ROS 2 Humble and MoveIt 2
+### 1. Install ROS 2 Jazzy and MoveIt 2
 
-You can follow [this guide](https://aleksandarhaber.com/how-to-properly-install-moveit2-in-ros2-humble-and-fix-tutorial-errors/) or install via APT:
+You can follow [this guide](https://aleksandarhaber.com/how-to-properly-install-moveit2-in-ros2-jazzy-and-fix-tutorial-errors/) or install via APT:
 
 ```bash
 sudo apt update
-sudo apt install ros-humble-desktop ros-humble-moveit
+sudo apt install ros-jazzy-desktop ros-jazzy-moveit
 ```
 
 ### 1. Create and build a workspace
@@ -36,7 +39,7 @@ colcon build
 
 ```bash
 colcon build
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ```
 
@@ -55,7 +58,7 @@ LC_NUMERIC=en_US.UTF-8 ros2 launch parol6_moveit demo.launch.py
 Fix common MoveIt 2 issues : 
 
 ```bash
-sudo apt install --reinstall ros-humble-geometric-shapes
+sudo apt install --reinstall ros-jazzy-geometric-shapes
 ```
 
 MoveIt Setup Assistant (Optional):
@@ -65,7 +68,7 @@ ros2 launch moveit_robot_arm_sim demo.launch.py
 ```
 
 ⚠️ Note: All URDF/XACRO names must be lowercase to avoid issues!
-⚠️ Note: - [Common_errors](https://robotics.stackexchange.com/questions/103300/error-loading-custom-robotic-manipulator-model-in-moveit2-on-ros2-humbleerror-l)
+⚠️ Note: - [Common_errors](https://robotics.stackexchange.com/questions/103300/error-loading-custom-robotic-manipulator-model-in-moveit2-on-ros2-jazzyerror-l)
 
 
 ### ✅ TODO

@@ -24,3 +24,8 @@ arm_group_controller:
     state_interfaces:
       - position
       - velocity
+
+#added
+joint_state_broadcaster:
+  ros__parameters:
+    use_local_topics: false

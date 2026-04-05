@@ -18,15 +18,15 @@
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/index/ament_index_register_resource.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/environment/ament_cmake_environment_package_hook.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/ament_environment_hooks.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/ament_cmake_environment_hooks_package_hook.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/ament_generate_package_environment.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/index/ament_index_register_package.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/index/ament_cmake_index_package_hook.cmake"
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_register_resource.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment/ament_cmake_environment_package_hook.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/ament_environment_hooks.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/ament_cmake_environment_hooks_package_hook.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/ament_generate_package_environment.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_register_package.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_cmake_index_package_hook.cmake"
 		],
 		"nodes" : 
 		[
@@ -261,7 +261,7 @@
 			"destination" : "share/parol6/environment",
 			"paths" : 
 			[
-				"/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh"
+				"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh"
 			],
 			"type" : "file"
 		},
@@ -281,7 +281,7 @@
 			"destination" : "share/parol6/environment",
 			"paths" : 
 			[
-				"/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh"
+				"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh"
 			],
 			"type" : "file"
 		},

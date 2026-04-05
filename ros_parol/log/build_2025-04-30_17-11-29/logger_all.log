@@ -52,7 +52,7 @@
 [0.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
 [0.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
 [0.265s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/sourcelinux/ros2_ws2/install
-[0.266s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 343 installed packages in /opt/ros/humble
+[0.266s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 343 installed packages in /opt/ros/jazzy
 [0.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
 [0.298s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
 [0.299s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete

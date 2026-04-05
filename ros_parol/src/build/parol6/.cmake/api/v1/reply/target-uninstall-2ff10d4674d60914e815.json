@@ -11,10 +11,10 @@
 		],
 		"files" : 
 		[
-			"/opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_uninstall_target-extras.cmake",
-			"/opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake",
-			"/opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake",
-			"/opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/ament_cmake_uninstall_target-extras.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake",
+			"/opt/ros/jazzy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/jazzy/share/ament_cmake/cmake/ament_cmakeConfig.cmake",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
