@@ -6,7 +6,7 @@
     3D models, and launch files for the PAROL6 robot.
   </description>
 
-  <maintainer email="TODO@email.com">TODO</maintainer>
+  <maintainer email="hyunwoosong91@outlook.com">TODO</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

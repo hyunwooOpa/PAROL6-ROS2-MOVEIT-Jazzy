@@ -2,17 +2,15 @@
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<!-- Joint names renamed from L1-L6 to joint_1-joint_6 to fix Gazebo PoseRelativeToGraph collision -->
 <robot
   name="parol6">
-
   <link name="world"/>
   <joint name="base_joint" type="fixed">
     <parent link="world"/>
     <child link="base_link"/>
     <origin rpy="0 0 0" xyz="0.0 0.0 0.00"/>
   </joint>
-
-
   <link
     name="base_link">
     <inertial>
@@ -94,7 +92,7 @@
     </collision>
   </link>
   <joint
-    name="L1"
+    name="joint_1"
     type="revolute">
     <origin
       xyz="0 0 0"
@@ -152,7 +150,7 @@
     </collision>
   </link>
   <joint
-    name="L2"
+    name="joint_2"
     type="revolute">
     <origin
       xyz="0.0234207210610375 0 0.1105"
@@ -210,7 +208,7 @@
     </collision>
   </link>
   <joint
-    name="L3"
+    name="joint_3"
     type="revolute">
     <origin
       xyz="0 -0.18 0"
@@ -268,7 +266,7 @@
     </collision>
   </link>
   <joint
-    name="L4"
+    name="joint_4"
     type="revolute">
     <origin
       xyz="0.0435 0 0"
@@ -326,7 +324,7 @@
     </collision>
   </link>
   <joint
-    name="L5"
+    name="joint_5"
     type="revolute">
     <origin
       xyz="0 0 -0.17635"
@@ -347,25 +345,26 @@
     name="L6">
     <inertial>
       <origin
-        xyz="0.00632955087228015 -0.000453856352095022 -0.0554441567386594"
+        xyz="0.033 0.0422 0.037"
         rpy="0 0 0" />
       <mass
-        value="0.0703261410665101" />
+        value="0.4156" />
       <inertia
-        ixx="1.40276237518287E-05"
-        ixy="3.15503246005279E-07"
-        ixz="-9.28469598788221E-07"
-        iyy="1.81406721166117E-05"
-        iyz="-9.43630009030796E-07"
-        izz="2.34608103291027E-05" />
+        ixx="3.58E-05"
+        ixy="0"
+        ixz="0"
+        iyy="3.07E-05"
+        iyz="0"
+        izz="3.58E-05" />
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.033 0.0422 0.037"  
+        rpy="0 3.14159 0" />
       <geometry>
         <mesh
-          filename="package://parol6/meshes/L6.STL" />
+          filename="package://parol6/meshes/L6.STL" 
+          scale = "0.001 0.001 0.001"/>
       </geometry>
       <material
         name="">
@@ -375,19 +374,20 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.033 0.0422 0.037"
+        rpy="0 3.14159 0" />
       <geometry>
         <mesh
-          filename="package://parol6/meshes/L6.STL" />
+          filename="package://parol6/meshes/L6.STL" 
+          scale = "0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint
-    name="L6"
+    name="joint_6"
     type="continuous">
     <origin
-      xyz="0 0 0"
+      xyz="0 0.077 0"
       rpy="1.5708 0 0" />
     <parent
       link="L5" />
@@ -401,113 +401,40 @@
       effort="300"
       velocity="3" />
   </joint>
-
-  <transmission name="TRANS_L1"> 
-    <type>transmission_interface/SimpleTransmission</type> 
-    <joint name="L1"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    </joint> 
-    <actuator name="ACT_L1"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    <mechanicalReduction>1</mechanicalReduction> 
-    </actuator> 
-  </transmission> 
-
-  <transmission name="TRANS_L2"> 
-    <type>transmission_interface/SimpleTransmission</type> 
-    <joint name="L2"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    </joint> 
-    <actuator name="ACT_L2"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    <mechanicalReduction>1</mechanicalReduction> 
-    </actuator> 
-  </transmission> 
-
-  <transmission name="TRANS_L3"> 
-    <type>transmission_interface/SimpleTransmission</type> 
-    <joint name="L3"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    </joint> 
-    <actuator name="ACT_L3"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    <mechanicalReduction>1</mechanicalReduction> 
-    </actuator> 
-  </transmission> 
-
-  <transmission name="TRANS_L4"> 
-    <type>transmission_interface/SimpleTransmission</type> 
-    <joint name="L4"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    </joint> 
-    <actuator name="ACT_L4"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    <mechanicalReduction>1</mechanicalReduction> 
-    </actuator> 
-  </transmission> 
-
-  <transmission name="TRANS_L5"> 
-    <type>transmission_interface/SimpleTransmission</type> 
-    <joint name="L5"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    </joint> 
-    <actuator name="ACT_L5"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    <mechanicalReduction>1</mechanicalReduction> 
-    </actuator> 
-  </transmission> 
-
-  <transmission name="TRANS_L6"> 
-    <type>transmission_interface/SimpleTransmission</type> 
-    <joint name="L6"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    </joint> 
-    <actuator name="ACT_L6"> 
-
-    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
-    <mechanicalReduction>1</mechanicalReduction> 
-    </actuator> 
-  </transmission> 
-
-  <gazebo> 
-    <plugin name="control" filename="libgazebo_ros_control.so"> 
-    <robotNamespace>/</robotNamespace> 
-    </plugin> 
-  </gazebo> 
-
+  <gazebo>
+    <plugin
+      filename="gz_ros2_control-system"
+      name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find parol6_moveit)/config/ros2_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
   <gazebo reference="L1"> 
-    <selfCollide>true</selfCollide> 
+    <selfCollide>false</selfCollide> 
   </gazebo>
-
   <gazebo reference="L2"> 
-    <selfCollide>true</selfCollide> 
+    <selfCollide>false</selfCollide> 
   </gazebo>
-
   <gazebo reference="L3"> 
-    <selfCollide>true</selfCollide> 
+    <selfCollide>false</selfCollide> 
   </gazebo>
-
   <gazebo reference="L4"> 
-    <selfCollide>true</selfCollide> 
+    <selfCollide>false</selfCollide> 
   </gazebo>
-
   <gazebo reference="L5"> 
-    <selfCollide>true</selfCollide> 
+    <selfCollide>false</selfCollide> 
   </gazebo>
-
   <gazebo reference="L6"> 
-    <selfCollide>true</selfCollide> 
+    <selfCollide>false</selfCollide> 
   </gazebo>
-
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="joint_1"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="joint_2"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="joint_3"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="joint_4"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="joint_5"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="joint_6"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+  </ros2_control>
 </robot>

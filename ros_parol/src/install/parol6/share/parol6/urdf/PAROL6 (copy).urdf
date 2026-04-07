@@ -481,7 +481,7 @@
   </transmission> 
 
   <gazebo> 
-    <plugin name="control" filename="libgazebo_ros_control.so"> 
+    <plugin name="control" filename="libgazebo_ros2_control.so"> 
     <robotNamespace>/</robotNamespace> 
     </plugin> 
   </gazebo> 

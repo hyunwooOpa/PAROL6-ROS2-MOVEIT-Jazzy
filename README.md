@@ -12,7 +12,7 @@ source ~/ros2_ws/install/setup.bash
 ## 🛠️ Installation & Setup
 
 **Tested on:**
-- Ubuntu 22.04
+- Ubuntu 24.04
 - ROS 2 Jazzy
 
 ### 1. Install ROS 2 Jazzy and MoveIt 2
