@@ -345,7 +345,7 @@
     name="L6">
     <inertial>
       <origin
-        xyz="0.033 0.0422 0.037"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <mass
         value="0.4156" />
@@ -359,12 +359,11 @@
     </inertial>
     <visual>
       <origin
-        xyz="0.033 0.0422 0.037"  
+        xyz="0 0 0"  
         rpy="0 3.14159 0" />
       <geometry>
         <mesh
-          filename="package://parol6/meshes/L6.STL" 
-          scale = "0.001 0.001 0.001"/>
+          filename="package://parol6/meshes/L6.STL"/>
       </geometry>
       <material
         name="">
@@ -374,12 +373,11 @@
     </visual>
     <collision>
       <origin
-        xyz="0.033 0.0422 0.037"
+        xyz="0 0 0"
         rpy="0 3.14159 0" />
       <geometry>
         <mesh
-          filename="package://parol6/meshes/L6.STL" 
-          scale = "0.001 0.001 0.001"/>
+          filename="package://parol6/meshes/L6.STL"/>
       </geometry>
     </collision>
   </link>
@@ -401,15 +399,8 @@
       effort="300"
       velocity="3" />
   </joint>
-  <gazebo>
-    <plugin
-      filename="gz_ros2_control-system"
-      name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-      <parameters>$(find parol6_moveit)/config/ros2_controllers.yaml</parameters>
-    </plugin>
-  </gazebo>
-  <gazebo reference="L1"> 
-    <selfCollide>false</selfCollide> 
+  <gazebo reference="L1">
+    <selfCollide>false</selfCollide>
   </gazebo>
   <gazebo reference="L2"> 
     <selfCollide>false</selfCollide> 
@@ -423,18 +414,7 @@
   <gazebo reference="L5"> 
     <selfCollide>false</selfCollide> 
   </gazebo>
-  <gazebo reference="L6"> 
-    <selfCollide>false</selfCollide> 
+  <gazebo reference="L6">
+    <selfCollide>false</selfCollide>
   </gazebo>
-  <ros2_control name="GazeboSystem" type="system">
-    <hardware>
-      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
-    </hardware>
-    <joint name="joint_1"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
-    <joint name="joint_2"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
-    <joint name="joint_3"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
-    <joint name="joint_4"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
-    <joint name="joint_5"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
-    <joint name="joint_6"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
-  </ros2_control>
 </robot>

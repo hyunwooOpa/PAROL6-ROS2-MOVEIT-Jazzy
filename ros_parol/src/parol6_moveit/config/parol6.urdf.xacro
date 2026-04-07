@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="parol6">
     <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+    <!--
+        sim_mode controls which ros2_control hardware plugin gets injected by
+        parol6.ros2_control.xacro:
+            mock  -> mock_components/GenericSystem (used by demo.launch.py via
+                     the MoveIt-Setup-Assistant-generated rsp/move_group/etc.
+                     sub-launches, which all read this default)
+            gz    -> gz_ros2_control/GazeboSimSystem + the gz_ros2_control-system
+                     plugin tag (set explicitly by gazebo.launch.py)
+        Default is mock because the sub-launches in generate_demo_launch each
+        rebuild MoveItConfigsBuilder from scratch and only see the default.
+    -->
+    <xacro:arg name="sim_mode" default="mock" />
 
     <!-- Import parol6 urdf file -->
     <xacro:include filename="$(find parol6)/urdf/parol6.urdf" />
@@ -8,7 +20,9 @@
     <!-- Import control_xacro -->
     <xacro:include filename="parol6.ros2_control.xacro" />
 
-
-    <xacro:parol6_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+    <xacro:parol6_ros2_control
+        name="GazeboSystem"
+        initial_positions_file="$(arg initial_positions_file)"
+        sim_mode="$(arg sim_mode)"/>
 
 </robot>

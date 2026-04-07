@@ -11,9 +11,9 @@ moveit_simple_controller_manager:
     action_ns: follow_joint_trajectory #added
     default: true #added
     joints:
-      - L1
-      - L2
-      - L3
-      - L4
-      - L5
-      - L6
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6
